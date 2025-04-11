@@ -1,30 +1,49 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view />
+  <div id="app">
+    <router-view />
+  </div>
 </template>
 
+<script>
+export default {
+  name: "App",
+};
+</script>
+
 <style>
+/* Глобальні стилі */
+body {
+  background-color: #ffffff; 
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
 }
 
+/* Навігація */
 nav {
-  padding: 30px;
+  padding: 10px 20px; /* Адаптивні відступи */
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #000000;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
 nav a.router-link-exact-active {
-  color: #42b983;
+  color: #a08582;
+}
+
+/* Плавний скролінг */
+html {
+  scroll-behavior: smooth;
 }
 </style>
